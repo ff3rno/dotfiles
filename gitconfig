@@ -1,0 +1,56 @@
+[user]
+	name = Cris Mihalache
+	email = ff3rno@pm.me
+
+[color]
+	ui = auto
+
+[color "diff"]
+	meta = blue bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow bold
+	remote = green bold
+	plain = red bold
+
+[color "status"]
+	added = yellow
+	changed = green bold
+	untracked = blue bold
+
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
+
+[core]
+	autocrlf = false
+	filemode = false
+	editor = vim
+	sshCommand = ssh -i ~/.ssh/id_rsa -F /dev/null
+
+[branch]
+	autosetuprebase = always
+
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[pull]
+	rebase = true
+[init]
+	defaultBranch = master
+[gpg]
+	program = gpg
+	format = ssh
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true

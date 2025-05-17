@@ -1,0 +1,1 @@
+export PATH="$PATH:/Users/f3rno/.lmstudio/bin:$HOME/.local/bin/env:$HOME/.console-ninja/.bin"
